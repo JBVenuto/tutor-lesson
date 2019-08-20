@@ -38,6 +38,9 @@ function Movie(title, director, rating) {
 // To make a new object using the constructor
 var jaws = new Movie("Jaws", "Spielberg", "PG")
 
+// Add properties to the object
+jaws.myReview = "9/10";
+
 // Method is a function that is a part of the object or constructor
 // Methods can be added to an object 
 jaws.newMethod = function() {
