@@ -7,6 +7,9 @@ $(document).ready(function(){
     // all of the code will go inside this callback function
 
     // target element
+    $("#target-element").on("click", function(){
+        // code that runs when the element is clicked
+    })
 
     // find attribute name
     // this can be set to a variable
@@ -20,4 +23,14 @@ $(document).ready(function(){
 
     // add newElement to the document
     $("#parent-element").append(newElement);
+
+    //************************ Ajax********************************
+    // Ajax is used to gather or send information from an API
+    $.ajax({
+        url: url,
+        method: "GET"
+    })
+    .then(function(response){
+        // function that happens after the request has been made to the url
+    })
 })
