@@ -44,12 +44,32 @@ connection.query('SELECT * FROM table', (err, res) => {
 });
 
 // Add entry to table
-connection.query(`INSERT INTO restaurants (name) VALUES ('${restaurantName}')`, (err, results) => {
+connection.query(`INSERT INTO table (name, numbervalue) VALUES ('${nameToAddToTable}, ${int}')`, (err, results) => {
     if(err) {
         console.log(err);
         throw err;
     }
     else {
         console.log('restaurant added');
+    }
+});
+
+// Change an entry in the table
+connection.query(`UPDATE table SET truefalsevalue = false WHERE id = ${id}`, (err, results) => {
+    if(err) {
+        return res.send(err)
+    }
+    else {
+        console.log('updated table');
+    }
+});
+
+// Delete entry from the table
+connection.query(`DELETE FROM table WHERE id = ${id}`, (err, results) => {
+    if(err) {
+        return res.send(err)
+    }
+    else {
+        console.log('deleted entry');
     }
 });
