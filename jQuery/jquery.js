@@ -14,6 +14,9 @@ $(document).ready(function(){
     // find attribute name
     // this can be set to a variable
     $(this).attr("attribute-name")
+    // change attribute
+    // this can be used to change a picture, link, etc.
+    $("#target-element").attr("attributeToChange", "newAttributeValue")
 
     // to make an element you can set a variable to an html tag
     var newElement = $("<div>");
