@@ -73,3 +73,16 @@ connection.query(`DELETE FROM table WHERE id = ${id}`, (err, results) => {
         console.log('deleted entry');
     }
 });
+
+// --------------- Different ways of bringing back select data ---------------------
+// Brings back the data only from select columns for all rows
+var query = "SELECT columnName1, columnName2 FROM tableName";
+// Brings back data from select columns that meet a certain condition
+var query = "SELECT columnName2, columnName3, columnName4 FROM tableName WHERE columnName1 = 'desiredValue'";
+
+// Select only within a range of values
+var query = "SELECT columnName1, columnName2 FROM tableName WHERE columnName3 BETWEEN ? AND ?";
+
+// Select all that meet a certain criteria
+var query = "SELECT * FROM tableName WHERE ? = ?";
+
