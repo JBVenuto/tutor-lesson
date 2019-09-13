@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <!-- Form to get user info -->
+    <form roll="form">
+        <label for="userName">Name: </label>
+            <input type="text" id="userName"><br>
+        <label for="userAge">Age:  </label>
+            <input type="text" id="userAge"><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    
+    <script>
+        // Function to run when submit is clicked
+        $("#submit").on("click", function() {
+            // Prevent the default action (refresh) of a submit button being clicked
+            event.preventDefault();
+
+            // Set all of the data from the form to an object
+            var userInfo = {
+                name: $("#userName").val().trim(),
+                ageGroup: $("#userAge").val().trim()
+            }
+            
+            // log the user info for testing
+            console.log(userInfo);
+
+            $.post("/userapi", userInfo)
+        })
+    </script>
+</body>
+</html>
