@@ -20,9 +20,28 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'form.html'));
 })
 
-// Post request to the api
-app.post("/userapi", function(req, res){
+app.get('/api', function (req, res){
+    return req.json(data)
+})
+
+// Post request to add to the api
+app.post('/api', function(req, res){
+    // Console log to see the data being sent from the front end
     console.log(req.body);
+})
+
+// Put request to update an item in the api
+app.put('/api/:id', function(req, res){
+    // Console log to see the data being sent from the front end
+    console.log(req.body);
+    // Variable to assign the id from the url
+    var id = req.params.id
+})
+
+// Delete request to remove an item from the api
+app.delete('/api/:id', function(req, res) {
+    // Variable to assign the id from the url
+    var id = req.params.id
 })
 
 // Starts the server to begin listening
