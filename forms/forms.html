@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <!-- jQuery link for students that are using jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+    <h1>Please fill out the following form:</h1>
+    <form name="userInfo">
+        <label>Name:</label>
+        <input type="text" id="userName"><br>
+
+        <label>Zip Code:</label>
+        <input type="text" id="userZip"><br>
+
+        <button type="submit" id="submit">Submit</button>
+
+    </form>
+
+    <!-- JavaScript -->
+    <script>
+        // *************** Get values using vanilla JavaScript ***************
+        document.getElementById("submit").onclick = function() {
+            event.preventDefault();
+            var userName = document.getElementById("userName").value;
+            var userZip = document.getElementById("userZip").value;
+            
+            if(userZip.length !== 5) {
+                alert("Please enter a 5 digit zip code")
+            }
+            else{
+                alert("Thank you. Your information has been submitted")
+            }
+        }
+        
+        // *************** Get values using vanilla JavaScript ***************
+        // $("#submit").on("click", function() {
+        //     event.preventDefault();
+        //     var userName = $("#userName").val().trim();
+        //     var userZip = $("#userZip").val().trim();
+
+        //     if(userZip !== 5) {
+        //         alert("Please enter a 5 digit zip code");
+        //     }
+        // })
+    </script>
+</body>
+</html>
