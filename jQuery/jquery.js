@@ -29,6 +29,8 @@ $(document).ready(function(){
 
     // add html into an element
     $("#target-element").html("<h1>Hello World!</h1>")
+    // .html is replace anything in that element with the new html
+    // . append should be used if you want to add something without removing
 
     // change an elements css
     $("target-element").css("color", "red");
