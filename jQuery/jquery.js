@@ -27,6 +27,12 @@ $(document).ready(function(){
     // add newElement to the document
     $("#parent-element").append(newElement);
 
+    // add html into an element
+    $("#target-element").html("<h1>Hello World!</h1>")
+
+    // change an elements css
+    $("target-element").css("color", "red");
+
     //************************ Ajax********************************
     // Ajax is used to gather or send information from an API
     $.ajax({
