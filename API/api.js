@@ -12,12 +12,12 @@ var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
 
 
 //************************ Ajax********************************
-    // Ajax is used to gather or send information from an API
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
-    .then(function(response){
-        // function that happens after the request has been made to the url
-        console.log(response)
-    })
+// Ajax is used to gather or send information from an API
+$.ajax({
+    url: queryURL,
+    method: "GET"
+})
+.then(function (response) {
+    // function that happens after the request has been made to the url
+    console.log(response)
+})
