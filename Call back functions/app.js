@@ -27,3 +27,7 @@ function logAnswer(num) {
 
 addition(2, 3, logAnswer);
 
+// Simple example above can also be written as:
+addition(2, 3, function(res){
+    console.log(res)
+})
