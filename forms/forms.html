@@ -17,6 +17,13 @@
         <label>Zip Code:</label>
         <input type="text" id="userZip"><br>
 
+        <div>Favorite color:
+            <input type="radio" name="color" id="radio1" value="yellow"><label>yellow</label>
+            <input type="radio" name="color" id="radio2" value="red"><label>red</label>
+            <input type="radio" name="color" id="radio3" value="green"><label>green</label>
+            <input type="radio" name="color" id="radio4" value="blue"><label>blue</label>
+        </div>
+
         <button type="submit" id="submit">Submit</button>
 
     </form>
@@ -26,6 +33,8 @@
         // *************** Get values using vanilla JavaScript ***************
         document.getElementById("submit").onclick = function() {
             event.preventDefault();
+            
+            // Save the values from the text inputs
             var userName = document.getElementById("userName").value;
             var userZip = document.getElementById("userZip").value;
             
@@ -35,9 +44,24 @@
             else{
                 alert("Thank you. Your information has been submitted")
             }
+
+            // Get the value of the checked radio input
+            var radios = document.getElementsByName("color");
+            if(radios[0].checked == true){
+                console.log("favorite color:", radios[0].value)
+            }
+            if(radios[1].checked == true){
+                console.log("favorite color:", radios[1].value)
+            }
+            if(radios[2].checked == true){
+                console.log("favorite color:", radios[2].value)
+            }
+            if(radios[3].checked == true){
+                console.log("favorite color:", radios[3].value)
+            }
         }
         
-        // *************** Get values using vanilla JavaScript ***************
+        // *************** Get values using jQuery ***************
         // $("#submit").on("click", function() {
         //     event.preventDefault();
         //     var userName = $("#userName").val().trim();
