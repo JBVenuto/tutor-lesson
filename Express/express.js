@@ -30,12 +30,12 @@ app.get('/', function (req, res) {
 })
 
 // Display json data from an API
-app.get('/api/names', function (req, res){
-    return res.json(names)
+app.get('/api/animals', function (req, res){
+    return res.json(animals)
 })
 // Display single item from API
 // Use :keyName to identify a url that will change but bring back the information for that value
-app.get('/api/names/:id', function (req, res) {
+app.get('/api/animals/:id', function (req, res) {
     // parse the URL to get the id we want
     var wantedId = req.params.id
 
@@ -51,7 +51,7 @@ app.get('/api/names/:id', function (req, res) {
 })
 
 // Post data to the API
-app.post("/api/names", function(req, res) {
+app.post("/api/animals", function(req, res) {
     // Parse or read through the data that is being sent.
     // This is different from reading through the url
     var newName = req.body;
