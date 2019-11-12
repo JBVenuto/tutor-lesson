@@ -1,50 +1,52 @@
-[
-    {
-        "id": 0,
-        "animal": "",
-        "land-animal": true,
-        "legs": 4
-    },
-    {
-        "id": 1,
-        "animal": "bear",
-        "land-animal": true,
-        "legs": 4
-    },
-    {
-        "id": 2,
-        "animal": "cat",
-        "land-animal": true,
-        "legs": 4
-    },
-    {
-        "id": 3,
-        "animal": "cow",
-        "land-animal": true,
-        "legs": 4
-    },
-    {
-        "id": 4,
-        "animal": "dog",
-        "land-animal": true,
-        "legs": 4
-    },
-    {
-        "id": 5,
-        "animal": "dolphin",
-        "land-animal": false,
-        "legs": 0
-    },
-    {
-        "id": 6,
-        "animal": "kangaroo",
-        "land-animal": true,
-        "legs": 2
-    },
-    {
-        "id": 7,
-        "animal": "shark",
-        "land-animal": false,
-        "legs": 0
-    }
-]
+{
+    "data": [
+        {
+            "id": 0,
+            "animal": "",
+            "land-animal": true,
+            "legs": 4
+        },
+        {
+            "id": 1,
+            "animal": "bear",
+            "land-animal": true,
+            "legs": 4
+        },
+        {
+            "id": 2,
+            "animal": "cat",
+            "land-animal": true,
+            "legs": 4
+        },
+        {
+            "id": 3,
+            "animal": "cow",
+            "land-animal": true,
+            "legs": 4
+        },
+        {
+            "id": 4,
+            "animal": "dog",
+            "land-animal": true,
+            "legs": 4
+        },
+        {
+            "id": 5,
+            "animal": "dolphin",
+            "land-animal": false,
+            "legs": 0
+        },
+        {
+            "id": 6,
+            "animal": "kangaroo",
+            "land-animal": true,
+            "legs": 2
+        },
+        {
+            "id": 7,
+            "animal": "shark",
+            "land-animal": false,
+            "legs": 0
+        }
+    ]
+}
