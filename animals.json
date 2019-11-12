@@ -1,0 +1,42 @@
+[
+    {
+        "animal": "",
+        "land-animal": true,
+        "legs": 4
+    },
+    {
+        "animal": "bear",
+        "land-animal": true,
+        "legs": 4
+    },
+    {
+        "animal": "cat",
+        "land-animal": true,
+        "legs": 4
+    },
+    {
+        "animal": "cow",
+        "land-animal": true,
+        "legs": 4
+    },
+    {
+        "animal": "dog",
+        "land-animal": true,
+        "legs": 4
+    },
+    {
+        "animal": "dolphin",
+        "land-animal": false,
+        "legs": 0
+    },
+    {
+        "animal": "kangaroo",
+        "land-animal": true,
+        "legs": 2
+    },
+    {
+        "animal": "shark",
+        "land-animal": false,
+        "legs": 0
+    }
+]
