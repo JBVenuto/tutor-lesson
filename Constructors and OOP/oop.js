@@ -6,24 +6,25 @@ function Movie(title, director, rating) {
     this.rating = rating;
 }
 
+// Method is a function that is a part of the object or constructor
+// To add a method to a constructor use .prototype
+// We use prototype so that the method doesn't have to be recreated for every instance
+// Instead it will be attached to the constructor and the instance has access to the method
+Movie.prototype.logInfo = function(){
+    console.log(this.title + ", directed by", this.director + ", is rated", this.rating);
+}
+
+
 // To make a new object using the constructor
-var jaws = new Movie("Jaws", "Spielberg", "PG")
+var jaws = new Movie("Jaws", "Steven Spielberg", "PG")
 
 // Add properties to the object
 jaws.myReview = "9/10";
 
-// Method is a function that is a part of the object or constructor
-// Methods can be added to an object 
-jaws.newMethod = function() {
-    return this.title + " is rated " + this.rating;
+// To add a unique method to a object that was created using a constructor
+jaws.myFavorite = function() {
+    console.log(this.title, "is my favorite movie");
 }
 
-// To add method to a constructor you have to add it to the code in the constructor
-function Movie(title, director, rating) {
-    this.title = title;
-    this.director = director;
-    this.rating = rating;
-    this.about = function () {
-        return this.title + " by director, " + this.director + " is rated " + this.rating;
-    };
-}
+console.log(jaws);
+jaws.logInfo();
