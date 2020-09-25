@@ -23,7 +23,11 @@ Sub Test()
        ' I started at 2 assuming that 1 is the label 
        ' After running this change it to 22 and run again to get the next set of 20
        Set cell = intCount + 2
-       doc.getElementById("macVin" & intCount).Value = This.Workbook.Sheets("Data").Range("A" & cell)
+       Dim elId 
+       Dim aCell
+       elId = "macVin" & intCount
+       aCell = "A" & cell
+       doc.getElementById(elId).Value = This.Workbook.Sheets("Data").Range(aCell)
     Next intCount
 
     doc.getElementsById("btnsDiv").Click
